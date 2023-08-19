@@ -13,14 +13,14 @@ ENV DEBIAN_FRONTEND noninteractive
 # CMD docker run执行
 # RUN docker build执行
 
-RUN apt-get update -y
-RUN apt-get install nginx -y
-RUN apt-get install vim -y
-RUN apt-get install wget -y
-RUN apt-get install curl -y
-RUN apt-get install gzip -y
-RUN apt-get install inetutils-ping -y
-RUN apt-get install net-tools -y
+# RUN apt-get update -y
+# RUN apt-get install nginx -y
+# RUN apt-get install vim -y
+# RUN apt-get install wget -y
+# RUN apt-get install curl -y
+# RUN apt-get install gzip -y
+# RUN apt-get install inetutils-ping -y
+# RUN apt-get install net-tools -y
 
 # WORKDIR 指定工作目录
 WORKDIR /home/
