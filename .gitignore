@@ -1,0 +1,13 @@
+node_modules
+chatglm2-6b/chatglm2-6b
+vendor
+.idea/
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+resource/json
+token.json
