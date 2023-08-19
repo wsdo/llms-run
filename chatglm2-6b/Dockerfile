@@ -13,7 +13,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # CMD docker run执行
 # RUN docker build执行
 
-RUN apt-get update
+RUN apt-get update -y
 RUN apt-get install nginx -y
 RUN apt-get install vim -y
 RUN apt-get install wget -y
