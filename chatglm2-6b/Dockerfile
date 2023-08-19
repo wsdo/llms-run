@@ -17,8 +17,6 @@ ENV DEBIAN_FRONTEND noninteractive
 # CMD docker run执行
 # RUN docker build执行
 
-ADD node-v14.16.1-linux-x64.tar.xz /usr/local/src/
-
 RUN apt-get update
 RUN apt-get install nginx -y
 RUN apt-get install vim -y
@@ -30,10 +28,6 @@ RUN apt-get install net-tools -y
 
 # WORKDIR 指定工作目录
 WORKDIR /home/
-
-RUN ln -s /usr/local/src/node-v14.16.1-linux-x64/bin/node /usr/local/bin/node
-RUN ln -s /usr/local/src/node-v14.16.1-linux-x64/bin/npm /usr/local/bin/npm
-
 
 RUN apt-get -y install build-essential nghttp2 libnghttp2-dev libssl-dev git-lfs
 
