@@ -165,13 +165,13 @@ async def predict(query: str, history: List[List[str]], model_id: str):
 
 
 
-# 如果服务器上面已经下载好模型，可以把这个地址改成自己的。
+# 如果服务器上面已经下载好模型，可以把 THUDM/chatglm2-6b 这个地址改成自己的。
 if __name__ == "__main__":
-    tokenizer = AutoTokenizer.from_pretrained("THUDM/chatglm2-6b", trust_remote_code=True)
-    model = AutoModel.from_pretrained("THUDM/chatglm2-6b", trust_remote_code=True).cuda()
+    tokenizer = AutoTokenizer.from_pretrained("/home/chatglm2-6b", trust_remote_code=True)
+    model = AutoModel.from_pretrained("/home/chatglm2-6b", trust_remote_code=True).cuda()
     # 多显卡支持，使用下面两行代替上面一行，将num_gpus改为你实际的显卡数量
     # from utils import load_model_on_gpus
     # model = load_model_on_gpus("THUDM/chatglm2-6b", num_gpus=2)
     model.eval()
 
-    uvicorn.run(app, host='0.0.0.0', port=8000, workers=1)
+    uvicorn.run(app, host='0.0.0.0', port=8080, workers=1)
