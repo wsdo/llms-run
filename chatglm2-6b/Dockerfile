@@ -13,7 +13,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # CMD docker run执行
 # RUN docker build执行
 
-# RUN apt-get update -y
+RUN apt-get update -y
 # RUN apt-get install nginx -y
 # RUN apt-get install vim -y
 # RUN apt-get install wget -y
@@ -21,11 +21,12 @@ ENV DEBIAN_FRONTEND noninteractive
 # RUN apt-get install gzip -y
 # RUN apt-get install inetutils-ping -y
 # RUN apt-get install net-tools -y
+RUN apt-get  install build-essential nghttp2 libnghttp2-dev libssl-dev git-lfs -y
 
 # WORKDIR 指定工作目录
 WORKDIR /home/
 
-RUN apt-get -y install build-essential nghttp2 libnghttp2-dev libssl-dev git-lfs
+
 
 RUN git clone https://huggingface.co/THUDM/chatglm2-6b
 
