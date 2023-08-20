@@ -2,7 +2,7 @@ FROM pytorch/pytorch:latest
 
 # Set up time zone.
 ENV TZ=UTC
-RUN sudo ln -snf /usr/share/zoneinfo/$TZ /etc/localtime
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime
 
 
 # MAINTAINER
