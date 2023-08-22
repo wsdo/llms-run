@@ -37,4 +37,4 @@ EXPOSE 8080
 COPY . .
 RUN pip install -r requirements.txt
 
-CMD ["python3", "openai-api.py"]
+# CMD ["python3", "openai-api.py"]
